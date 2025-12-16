@@ -18,14 +18,14 @@ on:
 
 
 jobs:
-    Edge_Test:
+  Edge_Test:
     # the machine that will run on job
-     runs-on: windows-latest
+    runs-on: windows-latest
     # permissions for the job
-     permissions:
+    permissions:
       checks: write
     # the steps that will be run in the job
-     steps:
+    steps:
       #to pull the code from the repo
       - name: Checkout code
         uses: actions/checkout@v2
@@ -47,17 +47,17 @@ jobs:
       - name: upload test results
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
+          name: test-results-Edge
           path: "test-output/reports/*.html"
 
-    Chrome_test:
+  Chrome_test:
     # the machine that will run on job
-     runs-on: windows-latest
+    runs-on: windows-latest
     # permissions for the job
-     permissions:
+    permissions:
       checks: write
     # the steps that will be run in the job
-     steps:
+    steps:
       #to pull the code from the repo
       - name: Checkout code
         uses: actions/checkout@v2
@@ -79,5 +79,5 @@ jobs:
       - name: upload test results
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
+          name: test-results-Chrome
           path: "test-output/reports/*.html"
