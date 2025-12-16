@@ -42,7 +42,7 @@ jobs:
           maven-version: '3.9.9'
     #to run the maven tests
       - name: Running Tests
-        run:  mvn test -Dtest="project.tests" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="EDGE" clean test
+        run:  mvn test -Dtest="LoginTest" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="EDGE" clean test
 
       - name: upload test results
         uses: actions/upload-artifact@v4
@@ -74,7 +74,7 @@ jobs:
           maven-version: '3.9.9'
        #to run the maven tests
       - name: Running Tests
-        run: mvn test -Dtest="project.tests" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="EDGE" clean test
+        run: mvn test -Dtest="LoginTest" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="CHROME" clean test
 
       - name: upload test results
         uses: actions/upload-artifact@v4
