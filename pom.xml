@@ -24,7 +24,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
-
                 <configuration>
                     <argLine>
                         -javaagent:"${user.home}/.m2/repository/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -46,6 +45,15 @@
 
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+
 
         </plugins>
     </build>
