@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest{
     public void validSupUserLoginTest() {
         new LoginPage(driver).navigateToLoginPage()
                 .enterUsername(testData.getJsonData("validSupUser"))
-                .enterPassword(testData.getJsonData("validSupUserPassword"))
+                .enterPassword(testData.getJsonData("validSupPassword"))
                 .clickSupUser()
                 .clickLoginButton()
                 .verifyLoginSuccess();
@@ -51,8 +51,8 @@ public class LoginTest extends BaseTest{
     @Story("Sup User should see an error message when entering invalid credentials")
     public void invalidSupUserLoginTest() {
         new LoginPage(driver).navigateToLoginPage()
-                .enterUsername(testData.getJsonData("inValidSupUser"))
-                .enterPassword(testData.getJsonData("invalidSupUserPassword"))
+                .enterUsername(testData.getJsonData("invalidSupUser"))
+                .enterPassword(testData.getJsonData("invalidSupPassword"))
                 .clickSupUser()
                 .clickLoginButton()
                 .verifyLoginFailure(testData.getJsonData("expectedError"));
