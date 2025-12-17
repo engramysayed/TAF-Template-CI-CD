@@ -28,7 +28,7 @@ jobs:
     steps:
       #to pull the code from the repo
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
      #to set up the java environment
       - name: setup java
         uses: actions/setup-java@v4
@@ -61,7 +61,7 @@ jobs:
     steps:
       #to pull the code from the repo
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
      #to set up the java environment
       - name: setup java
         uses: actions/setup-java@v4
