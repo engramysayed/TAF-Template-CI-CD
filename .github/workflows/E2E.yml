@@ -46,7 +46,7 @@ jobs:
         run:  mvn test -Dtest="LoginTest" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="EDGE" clean test
 
       - name: upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: test-results-Edge
           path: "test-output/reports/*.html"
@@ -79,7 +79,7 @@ jobs:
         run: mvn test -Dtest="LoginTest" -DEXECUTION_TYPE="HEADLESS" -DBROWSER_TYPE="CHROME" clean test
 
       - name: upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: test-results-Chrome
           path: "test-output/reports/*.html"
