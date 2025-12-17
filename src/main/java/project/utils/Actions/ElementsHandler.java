@@ -49,7 +49,7 @@ public class ElementsHandler {
     public void click(By locator) {
         try {
             scrollToElement(locator);
-            waitHandler.waitForElementToBeClickable(locator);
+            waitHandler.waitForElementToBeVisible(locator);
             findElement(locator).click();
 
         } catch (Exception e) {

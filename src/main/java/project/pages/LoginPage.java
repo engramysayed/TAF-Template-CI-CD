@@ -19,8 +19,8 @@ public class LoginPage {
     private final By passwordLocator = By.id("mat-input-1");
     private final By loginButtonLocator = By.xpath("(//span[.='Sign In'])[1]");
     private final By dashboardLocator = By.cssSelector("[href='/home/dashboard']");
-    private final By loginErrorLocator = By.xpath("(//div[.='Username or Password is incorrect'])[2]");
-    private final By supUserLocator = By.xpath("//span[.='Login as Sub-user']");
+    private final By loginErrorLocator = By.xpath("//div[.='Username or Password is incorrect']");
+    private final By supUserLocator = By.id("mat-mdc-slide-toggle-1-button");
 
 
     //actions
